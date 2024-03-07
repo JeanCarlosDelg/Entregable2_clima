@@ -14,7 +14,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
 
-
   const success = info => {
     setHasError(false)
     setCoords({

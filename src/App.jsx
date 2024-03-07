@@ -5,6 +5,7 @@ import axios from 'axios'
 import WeatherCard from './components/WeatherCard'
 import Loading from './components/Loading'
 import FormCountry from './components/FormCountry'
+import ErrorClima from './components/ErrorClima'
 
 function App() {
 
@@ -52,7 +53,10 @@ function App() {
         })
 
         .catch(err => console.log(err))
-        .finally(() => setIsLoading(false))
+        .finally(() => {
+          setIsLoading(false)
+          setHasError(false)
+        })
     }
   }, [coords])
 
@@ -63,7 +67,7 @@ function App() {
         isLoading
           ? <Loading />
           : hasError
-            ? <h2>Error</h2>
+            ? <ErrorClima />
             : (
               <WeatherCard
                 weather={weather}
@@ -76,6 +80,7 @@ function App() {
         <FormCountry
           setWeather={setWeather}
           setTemp={setTemp}
+          setHasError={setHasError}
         />
       </div>
     </div>

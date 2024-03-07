@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import './styles/FormCountry.css'
 import axios from 'axios'
 
-const FormCountry = ({ setWeather, setTemp }) => {
+const FormCountry = ({ setWeather, setTemp, setHasError }) => {
 
   const apiKey = 'da0b357dad782b8709b3a27c6778485e'
 
@@ -38,6 +38,9 @@ const FormCountry = ({ setWeather, setTemp }) => {
 
     if (city) {
       fetchData();
+      setHasError(false)
+    } else {
+      setHasError(true)
     }
 
   }, [city, apiKey]);

@@ -1,0 +1,15 @@
+.container_error {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.error_subtitle {
+    font-size: 1.8em;
+    margin: 0.5em;
+}
+
+.subError {
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+}

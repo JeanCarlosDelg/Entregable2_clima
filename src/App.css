@@ -1,0 +1,36 @@
+.app {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('/fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.weather__title {
+    text-align: center;
+    justify-content: center;
+    margin: 0.7em 4em 0.2em 4em;
+    font-size: 3.5em;
+    padding: 0.1rem 1rem;
+    border-radius: 1em;
+    border: 0.3rem solid black;
+    background-color: rgb(26, 110, 179);
+}
+
+.form {
+    text-align: center;
+    align-items: center;
+}
+
+.form__subTitle {
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 3px solid rgb(2, 31, 54);
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(10, 48, 80);
+}

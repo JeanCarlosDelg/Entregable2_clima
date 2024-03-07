@@ -32,8 +32,9 @@ function App() {
   }, [])
 
   useEffect(() => {
+    const apiKey = 'da0b357dad782b8709b3a27c6778485e'
     if (coords) {
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lon}&appid=${import.meta.env.VITE_API_KEY}`
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}`
 
       axios.get(url)
         .then(res => {
